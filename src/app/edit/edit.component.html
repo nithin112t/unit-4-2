@@ -1,0 +1,86 @@
+<html>
+  <form>
+    <div style="text-align-last: right; padding-right: 45%">
+      <h1>Update Player</h1>
+      <input
+        style="text-align-last: start"
+        type="hidden"
+        name="_id"
+        id="_id"
+        #_id
+        value="{{ data._id }}"
+      /><br />
+      <label><b>Name</b></label
+      >&nbsp;&nbsp;&nbsp;&nbsp;
+      <input
+        style="text-align-last: start"
+        type="text"
+        name="name"
+        id="name"
+        #Name
+        value="{{ data.Name }}"
+      /><br />
+      <label><b>Innings</b></label
+      >&nbsp;
+      <input
+        style="text-align-last: start"
+        type="number"
+        name="Innings"
+        id="Innings"
+        value="{{ data.Innings }}"
+        #Innings
+      /><br />
+      <label><b>Highest</b></label
+      >&nbsp;
+      <input
+        style="text-align-last: start"
+        type="number"
+        name="Highest"
+        id="Highest"
+        value="{{ data.Highest }}"
+        #Highest
+      /><br />
+      <label><b>Runs</b></label
+      >&nbsp;
+      <input
+        style="text-align-last: start"
+        type="number"
+        name="Runs"
+        id="Runs"
+        value="{{ data.Runs }}"
+        #Runs
+      /><br />
+      <label><b>Average</b></label
+      >&nbsp;
+      <input
+        style="text-align-last: start"
+        type="number"
+        name="Average"
+        id="Average"
+        value="{{ data.Average }}"
+        #Average
+      /><br /><br />
+      <button
+        type="submit"
+        style="margin-right: 6%"
+        (click)="
+          Update(
+            _id.value,
+            Name.value,
+            Innings.value,
+            Highest.value,
+            Runs.value,
+            Average.value
+          )
+        "
+      >
+        Update
+      </button>
+      <button type="button" style="margin-right: 15px">
+        <a routerLink="/dashboard" style="text-decoration: none; color: black"
+          >Back</a
+        >
+      </button>
+    </div>
+  </form>
+</html>
